@@ -24,6 +24,7 @@ Partial Class Form10
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form10))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -38,10 +39,10 @@ Partial Class Form10
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.logoutBtn = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.logoutBtn = New System.Windows.Forms.Button()
+        Me.InsertData = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +54,13 @@ Partial Class Form10
         Me.Panel2.Controls.Add(Me.Label3)
         resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.Name = "Panel2"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Info
+        Me.Label3.Name = "Label3"
         '
         'Label4
         '
@@ -168,6 +176,14 @@ Partial Class Form10
         resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
+        'logoutBtn
+        '
+        Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
+        resources.ApplyResources(Me.logoutBtn, "logoutBtn")
+        Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.logoutBtn.Name = "logoutBtn"
+        Me.logoutBtn.UseVisualStyleBackColor = False
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.LightBlue
@@ -184,26 +200,18 @@ Partial Class Form10
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 29
         '
-        'Label3
+        'InsertData
         '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label3.Name = "Label3"
-        '
-        'logoutBtn
-        '
-        Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
-        resources.ApplyResources(Me.logoutBtn, "logoutBtn")
-        Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
-        Me.logoutBtn.Name = "logoutBtn"
-        Me.logoutBtn.UseVisualStyleBackColor = False
+        resources.ApplyResources(Me.InsertData, "InsertData")
+        Me.InsertData.Name = "InsertData"
+        Me.InsertData.UseVisualStyleBackColor = True
         '
         'Form10
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.Controls.Add(Me.InsertData)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label4)
@@ -238,4 +246,5 @@ Partial Class Form10
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents logoutBtn As Button
+    Friend WithEvents InsertData As Button
 End Class
