@@ -42,6 +42,7 @@ Partial Class Form7
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.BackUpBtn = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -278,12 +279,23 @@ Partial Class Form7
         Me.Button7.Text = "Add"
         Me.Button7.UseVisualStyleBackColor = True
         '
+        'BackUpBtn
+        '
+        Me.BackUpBtn.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.BackUpBtn.Location = New System.Drawing.Point(860, 442)
+        Me.BackUpBtn.Name = "BackUpBtn"
+        Me.BackUpBtn.Size = New System.Drawing.Size(94, 29)
+        Me.BackUpBtn.TabIndex = 23
+        Me.BackUpBtn.Text = "Backup"
+        Me.BackUpBtn.UseVisualStyleBackColor = True
+        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
+        Me.Controls.Add(Me.BackUpBtn)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label4)
@@ -321,4 +333,5 @@ Partial Class Form7
     Friend WithEvents Button7 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents logoutBtn As Button
+    Friend WithEvents BackUpBtn As Button
 End Class

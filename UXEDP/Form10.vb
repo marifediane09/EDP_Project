@@ -1,31 +1,57 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.IO
 
 Public Class Form10
-    Private Sub Form10_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            Call Connect_to_DB()
+    Private dt As New DataTable() ' Declare the DataTable as a private field
 
-            ' Create a new DataTable to hold the results
-            Dim dt As New DataTable()
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Check if the DataTable has already been loaded from a file or database
+        If dt.Rows.Count > 0 Then
+            DataGridView1.DataSource = dt ' Bind the DataTable to the DataGridView
+        End If
+    End Sub
 
-            ' Create a SELECT query to retrieve all the records from the "items" table
-            Dim query As String = "SELECT * FROM users"
+    Private Sub InsertData_Click(sender As Object, e As EventArgs) Handles InsertData.Click
+        ' Display an OpenFileDialog to allow the user to select a CSV file
+        Dim openFileDialog1 As New OpenFileDialog()
+        openFileDialog1.Filter = "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*"
+        openFileDialog1.Title = "Select a CSV File"
 
-            ' Create a new MySqlDataAdapter to execute the query and fill the DataTable
-            Using da As New MySqlDataAdapter(query, myconn)
-                da.Fill(dt)
+        If openFileDialog1.ShowDialog() = DialogResult.OK Then
+            ' Read the selected CSV file into a DataTable
+            dt = New DataTable()
+            Using reader As New StreamReader(openFileDialog1.FileName)
+                ' Read the first line of the file to get the column names
+                Dim line As String = reader.ReadLine()
+                Dim columns As String() = line.Split(","c)
+
+                ' Add the columns to the DataTable
+                For Each column As String In columns
+                    dt.Columns.Add(column.Trim())
+                Next
+
+                ' Read the rest of the file to get the data rows
+                While Not reader.EndOfStream
+                    line = reader.ReadLine()
+                    Dim values As String() = line.Split(","c)
+
+                    ' Add a new row to the DataTable
+                    Dim row As DataRow = dt.NewRow()
+                    For i As Integer = 0 To values.Length - 1
+                        row(i) = values(i).Trim()
+                    Next
+                    dt.Rows.Add(row)
+                End While
             End Using
 
-            ' Bind the DataTable to the DataGridView control
+            ' Bind the DataTable to the DataGridView
             DataGridView1.DataSource = dt
 
-        Catch ex As MySqlException
-            MsgBox(ex.Number & " " & ex.Message)
-
-        Finally
-            Disconnect_to_DB()
-        End Try
+            ' Save the DataTable to a file or database
+            ' ...
+        End If
     End Sub
+
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim dashboard As New adminDashboard()
@@ -59,4 +85,5 @@ Public Class Form10
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Refresh()
     End Sub
+
 End Class
