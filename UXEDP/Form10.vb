@@ -2,13 +2,31 @@
 Imports System.IO
 
 Public Class Form10
-    Private dt As New DataTable() ' Declare the DataTable as a private field
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Check if the DataTable has already been loaded from a file or database
-        If dt.Rows.Count > 0 Then
-            DataGridView1.DataSource = dt ' Bind the DataTable to the DataGridView
-        End If
+    Private Sub Form10_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Call Connect_to_DB()
+
+            ' Create a new DataTable to hold the results
+            Dim dt As New DataTable()
+
+            ' Create a SELECT query to retrieve all the records from the "items" table
+            Dim query As String = "SELECT * FROM users"
+
+            ' Create a new MySqlDataAdapter to execute the query and fill the DataTable
+            Using da As New MySqlDataAdapter(query, myconn)
+                da.Fill(dt)
+            End Using
+
+            ' Bind the DataTable to the DataGridView control
+            DataGridView1.DataSource = dt
+
+        Catch ex As MySqlException
+            MsgBox(ex.Number & " " & ex.Message)
+
+        Finally
+            Disconnect_to_DB()
+        End Try
     End Sub
 
     Private Sub InsertData_Click(sender As Object, e As EventArgs) Handles InsertData.Click
@@ -18,37 +36,67 @@ Public Class Form10
         openFileDialog1.Title = "Select a CSV File"
 
         If openFileDialog1.ShowDialog() = DialogResult.OK Then
-            ' Read the selected CSV file into a DataTable
-            dt = New DataTable()
-            Using reader As New StreamReader(openFileDialog1.FileName)
-                ' Read the first line of the file to get the column names
-                Dim line As String = reader.ReadLine()
-                Dim columns As String() = line.Split(","c)
+            Try
+                Call Connect_to_DB()
 
-                ' Add the columns to the DataTable
-                For Each column As String In columns
-                    dt.Columns.Add(column.Trim())
-                Next
+                ' Read the selected CSV file into a DataTable
+                Dim dt As New DataTable()
+                Using reader As New StreamReader(openFileDialog1.FileName)
+                    ' Read the first line of the file to get the column names
+                    Dim line As String = reader.ReadLine()
+                    Dim columns As String() = line.Split(","c)
 
-                ' Read the rest of the file to get the data rows
-                While Not reader.EndOfStream
-                    line = reader.ReadLine()
-                    Dim values As String() = line.Split(","c)
-
-                    ' Add a new row to the DataTable
-                    Dim row As DataRow = dt.NewRow()
-                    For i As Integer = 0 To values.Length - 1
-                        row(i) = values(i).Trim()
+                    ' Add the columns to the DataTable
+                    For Each column As String In columns
+                        dt.Columns.Add(column.Trim())
                     Next
-                    dt.Rows.Add(row)
-                End While
-            End Using
 
-            ' Bind the DataTable to the DataGridView
-            DataGridView1.DataSource = dt
+                    ' Read the rest of the file to get the data rows
+                    While Not reader.EndOfStream
+                        line = reader.ReadLine()
+                        Dim values As String() = line.Split(","c)
 
-            ' Save the DataTable to a file or database
-            ' ...
+                        ' Add a new row to the DataTable
+                        Dim row As DataRow = dt.NewRow()
+                        For i As Integer = 0 To values.Length - 1
+                            row(i) = values(i).Trim()
+                        Next
+                        dt.Rows.Add(row)
+                    End While
+                End Using
+
+                ' Save the DataTable to the database
+                Dim query As String = "INSERT INTO users (fname, lname, username, email, user_password, user_role) VALUES (@fname, @lname, @username, @email, @user_password, @user_role)"
+                Using cmd As New MySqlCommand(query, myconn)
+                    For Each row As DataRow In dt.Rows
+                        cmd.Parameters.Clear()
+                        'cmd.Parameters.AddWithValue("@user_id", row("user_id"))
+                        cmd.Parameters.AddWithValue("@fname", row("fname"))
+                        cmd.Parameters.AddWithValue("@lname", row("lname"))
+                        cmd.Parameters.AddWithValue("@username", row("username"))
+                        cmd.Parameters.AddWithValue("@email", row("email"))
+                        cmd.Parameters.AddWithValue("@user_password", row("user_password"))
+                        cmd.Parameters.AddWithValue("@user_role", row("user_role"))
+                        cmd.ExecuteNonQuery()
+                    Next
+                End Using
+
+                ' Display a message box indicating that the data was successfully inserted
+                MessageBox.Show("Data inserted to database successfully!")
+
+                ' Reload the data from the database and bind it to the DataGridView control
+                dt.Clear()
+                Using da As New MySqlDataAdapter("SELECT * FROM users", myconn)
+                    da.Fill(dt)
+                End Using
+                DataGridView1.DataSource = dt
+
+            Catch ex As MySqlException
+                MsgBox(ex.Number & " " & ex.Message)
+
+            Finally
+                Disconnect_to_DB()
+            End Try
         End If
     End Sub
 
