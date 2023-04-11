@@ -1,0 +1,6 @@
+user_id,fname,lname,username,email,user_password,user_role
+1,Bea,Bela,hercules,hci@gmail.com,21232f297a57a5a743894a0e4a801fc3,renter
+2,Samatha,Chi,pop100,pqr@gmail.com,4ccb00973e9cd9758bc61d2dde00f3aa,renter
+3,Barny,Santos,barny,xyz@gmail.com,f35ae36195a84ae117ad7c768fdcd69a,renter
+4,Lily,Zy,cindy123,abc@gmail.com,195ee98e844f3a2d3b521d1347a9dc55,renter
+5,Anonymous,Chan,anya190,abcd@gmail.com,b5cf1fc4dc4ee22b7e6baff700297651,renter

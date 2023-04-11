@@ -8,4 +8,4 @@ user_id,fname,lname,username,email,user_password,user_role
 7,Morty,Lee,mlee,morty@gmail.com,5b7789c684005daa8b91ffd995c9817a,renter
 8,Rick,Brown,rickb,rick@gmail.com,8c156790fb962a1a876edc3f4c27fd78,renter
 9,Loid,Grim,loidgrim,loid@gmail.com,f49eced959fa0e3a8e7f41961bdbdbe4,renter
-10,Michael,Sy,msy,mikesy@gmail.com,148a90de0bb9a91d895bca4fb35496a2,renter
+10,Mike,Sy,msy,mikesy@gmail.com,148a90de0bb9a91d895bca4fb35496a2,renter

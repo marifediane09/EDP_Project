@@ -565,7 +565,7 @@
     <value>52</value>
   </data>
   <data name="InsertData.Text" xml:space="preserve">
-    <value>Insert Data</value>
+    <value>Add/Insert Data</value>
   </data>
   <data name="&gt;&gt;InsertData.Name" xml:space="preserve">
     <value>InsertData</value>
