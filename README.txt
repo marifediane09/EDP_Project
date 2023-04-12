@@ -27,3 +27,11 @@ What you can do as an admin:
 - You can view and add new categories.
 - You can view the orders and its status.
 - You can view the users registered in your system.
+- Backup database
+- Upload and insert new data (csv format) in the database
+
+Server connection:
+Server name = localhost
+Username = root
+Password = mdbanares
+Database name = rental_db

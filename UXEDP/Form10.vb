@@ -107,7 +107,7 @@ Public Class Form10
         Me.Hide()
     End Sub
 
-    Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
+    Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
         Form1.Show()
         Me.Close()
     End Sub
@@ -134,4 +134,9 @@ Public Class Form10
         Me.Refresh()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim backupForm As New backupForm1()
+        backupForm.Show()
+        Me.Hide()
+    End Sub
 End Class
