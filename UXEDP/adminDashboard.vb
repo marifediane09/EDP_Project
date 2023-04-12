@@ -33,4 +33,10 @@ Public Class adminDashboard
         Form1.Show()
         Me.Close()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim backupForm As New backupForm1()
+        backupForm.Show()
+        Me.Hide()
+    End Sub
 End Class

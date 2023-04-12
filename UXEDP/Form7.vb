@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports Microsoft.SqlServer
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports MySql.Data.MySqlClient
 
 Public Class Form7
@@ -67,39 +69,4 @@ Public Class Form7
         Me.Close()
     End Sub
 
-    Private Sub BackUpBtn_Click(sender As Object, e As EventArgs) Handles BackUpBtn.Click
-        Dim openFileDialog As New OpenFileDialog()
-        openFileDialog.Filter = "Batch Files (*.bat)|*.bat"
-        openFileDialog.Title = "Select a Batch File"
-
-        If openFileDialog.ShowDialog() = DialogResult.OK Then
-            Dim batchFilePath As String = openFileDialog.FileName
-            Dim process As Process = Process.Start(batchFilePath)
-            process.WaitForExit()
-
-            If process.ExitCode = 0 Then
-                MessageBox.Show("Batch file executed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Batch file execution failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        End If
-    End Sub
-
-    'Private Sub BackUpBtn_Click(sender As Object, e As EventArgs) Handles BackUpBtn.Click
-    'Dim saveDialog As New SaveFileDialog()
-    'saveDialog.Filter = "Backup Files (*.bak)|*.bak|All Files (*.*)|*.*"
-    'saveDialog.FilterIndex = 1
-    'saveDialog.RestoreDirectory = True
-
-    'If saveDialog.ShowDialog() = DialogResult.OK Then
-    'Dim backupFile As String = saveDialog.FileName
-
-    'Dim backupQuery As String = "BACKUP DATABASE rental_db TO DISK='" & backupFile & "'"
-
-    'Dim backupCmd As New MySqlCommand(backupQuery, myconn)
-
-    'Dim backup As New MySqlBackup(backupCmd)
-    'backup.ExportToFile(backupFile)
-    'End If
-    'End Sub
 End Class
