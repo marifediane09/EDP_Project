@@ -39,7 +39,7 @@ Partial Class Form10
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.logoutBtn = New System.Windows.Forms.Button()
+        Me.LogoutBtn = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.InsertData = New System.Windows.Forms.Button()
@@ -159,7 +159,7 @@ Partial Class Form10
         '
         Me.Panel1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.logoutBtn)
+        Me.Panel1.Controls.Add(Me.LogoutBtn)
         Me.Panel1.Controls.Add(Me.Panel11)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Panel10)
@@ -176,13 +176,13 @@ Partial Class Form10
         resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
-        'logoutBtn
+        'LogoutBtn
         '
-        Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
-        resources.ApplyResources(Me.logoutBtn, "logoutBtn")
-        Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
-        Me.logoutBtn.Name = "logoutBtn"
-        Me.logoutBtn.UseVisualStyleBackColor = False
+        Me.LogoutBtn.BackColor = System.Drawing.Color.MidnightBlue
+        resources.ApplyResources(Me.LogoutBtn, "LogoutBtn")
+        Me.LogoutBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.LogoutBtn.Name = "LogoutBtn"
+        Me.LogoutBtn.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -245,6 +245,6 @@ Partial Class Form10
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label3 As Label
-    Friend WithEvents logoutBtn As Button
+    Friend WithEvents LogoutBtn As Button
     Friend WithEvents InsertData As Button
 End Class
