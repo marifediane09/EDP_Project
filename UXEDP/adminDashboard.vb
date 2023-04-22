@@ -2,14 +2,14 @@
 Public Class adminDashboard
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim form7 As New Form7()
-        form7.Show()
+        Dim AdminItems As New AdminItems()
+        AdminItems.Show()
         Me.Hide()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim form9 As New Form9()
-        form9.Show()
+        Dim AdminCategories As New AdminCategories()
+        AdminCategories.Show()
         Me.Hide()
     End Sub
 
@@ -20,8 +20,8 @@ Public Class adminDashboard
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim form11 As New Form11()
-        form11.Show()
+        Dim AdminOrders As New AdminOrders()
+        AdminOrders.Show()
         Me.Hide()
     End Sub
 

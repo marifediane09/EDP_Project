@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form9
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class AdminItems
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,18 +20,15 @@ Partial Class Form9
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.logoutBtn = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -40,17 +37,36 @@ Partial Class Form9
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.catId = New System.Windows.Forms.TextBox()
-        Me.addCatBtn = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.catName = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.logoutBtn = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.MidnightBlue
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Location = New System.Drawing.Point(232, -6)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(778, 44)
+        Me.Panel2.TabIndex = 8
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.Info
+        Me.Label3.Location = New System.Drawing.Point(606, 15)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(160, 26)
+        Me.Label3.TabIndex = 23
+        Me.Label3.Text = "Logged in as admin"
         '
         'Panel11
         '
@@ -59,81 +75,6 @@ Partial Class Form9
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(14, 50)
         Me.Panel11.TabIndex = 19
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.MidnightBlue
-        Me.Panel3.Location = New System.Drawing.Point(11, 157)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(14, 50)
-        Me.Panel3.TabIndex = 15
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Martina", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(352, 57)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(219, 42)
-        Me.Label4.TabIndex = 25
-        Me.Label4.Text = "View Categories"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.MidnightBlue
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(232, -6)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(778, 44)
-        Me.Panel2.TabIndex = 24
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label1.Location = New System.Drawing.Point(606, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(160, 26)
-        Me.Label1.TabIndex = 56
-        Me.Label1.Text = "Logged in as admin"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.logoutBtn)
-        Me.Panel1.Controls.Add(Me.Panel11)
-        Me.Panel1.Controls.Add(Me.Button6)
-        Me.Panel1.Controls.Add(Me.Panel10)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.Panel6)
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Panel5)
-        Me.Panel1.Controls.Add(Me.Button5)
-        Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Location = New System.Drawing.Point(0, -6)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(234, 502)
-        Me.Panel1.TabIndex = 23
-        '
-        'logoutBtn
-        '
-        Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
-        Me.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.logoutBtn.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
-        Me.logoutBtn.Location = New System.Drawing.Point(42, 437)
-        Me.logoutBtn.Name = "logoutBtn"
-        Me.logoutBtn.Size = New System.Drawing.Size(152, 47)
-        Me.logoutBtn.TabIndex = 55
-        Me.logoutBtn.Text = "Logout"
-        Me.logoutBtn.UseVisualStyleBackColor = False
         '
         'Button6
         '
@@ -171,6 +112,14 @@ Partial Class Form9
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Reports"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.MidnightBlue
+        Me.Panel3.Location = New System.Drawing.Point(11, 157)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(14, 50)
+        Me.Panel3.TabIndex = 15
         '
         'Panel6
         '
@@ -263,107 +212,101 @@ Partial Class Form9
         Me.Button2.Text = "Items"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'DataGridView2
+        'Panel1
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(297, 112)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.RowTemplate.Height = 29
-        Me.DataGridView2.Size = New System.Drawing.Size(327, 314)
-        Me.DataGridView2.TabIndex = 26
+        Me.Panel1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.logoutBtn)
+        Me.Panel1.Controls.Add(Me.Panel11)
+        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Controls.Add(Me.Panel10)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.Panel6)
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.Panel5)
+        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Location = New System.Drawing.Point(0, -6)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(234, 502)
+        Me.Panel1.TabIndex = 7
         '
-        'Label8
+        'logoutBtn
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(691, 226)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(104, 26)
-        Me.Label8.TabIndex = 53
-        Me.Label8.Text = "Category ID:"
+        Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
+        Me.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.logoutBtn.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.logoutBtn.Location = New System.Drawing.Point(42, 442)
+        Me.logoutBtn.Name = "logoutBtn"
+        Me.logoutBtn.Size = New System.Drawing.Size(152, 47)
+        Me.logoutBtn.TabIndex = 20
+        Me.logoutBtn.Text = "Logout"
+        Me.logoutBtn.UseVisualStyleBackColor = False
         '
-        'catId
+        'Label4
         '
-        Me.catId.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.catId.Location = New System.Drawing.Point(801, 224)
-        Me.catId.Name = "catId"
-        Me.catId.Size = New System.Drawing.Size(165, 27)
-        Me.catId.TabIndex = 52
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Martina", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(546, 54)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(154, 42)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "View Items"
         '
-        'addCatBtn
+        'DataGridView1
         '
-        Me.addCatBtn.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.addCatBtn.Location = New System.Drawing.Point(801, 320)
-        Me.addCatBtn.Name = "addCatBtn"
-        Me.addCatBtn.Size = New System.Drawing.Size(165, 39)
-        Me.addCatBtn.TabIndex = 51
-        Me.addCatBtn.Text = "Add"
-        Me.addCatBtn.UseVisualStyleBackColor = True
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(283, 112)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 29
+        Me.DataGridView1.Size = New System.Drawing.Size(671, 314)
+        Me.DataGridView1.TabIndex = 21
         '
-        'Label5
+        'Button7
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(661, 264)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(134, 26)
-        Me.Label5.TabIndex = 50
-        Me.Label5.Text = "Category Name:"
+        Me.Button7.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button7.Location = New System.Drawing.Point(579, 442)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(102, 37)
+        Me.Button7.TabIndex = 22
+        Me.Button7.Text = "Add"
+        Me.Button7.UseVisualStyleBackColor = True
         '
-        'catName
-        '
-        Me.catName.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.catName.Location = New System.Drawing.Point(801, 264)
-        Me.catName.Name = "catName"
-        Me.catName.Size = New System.Drawing.Size(165, 27)
-        Me.catName.TabIndex = 49
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Martina", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(771, 160)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(195, 42)
-        Me.Label3.TabIndex = 54
-        Me.Label3.Text = "Add Category"
-        '
-        'Form9
+        'AdminItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.catId)
-        Me.Controls.Add(Me.addCatBtn)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.catName)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DataGridView2)
-        Me.Name = "Form9"
-        Me.Text = "EasyRent | Categories"
+        Me.Name = "AdminItems"
+        Me.Text = "Items | Items"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label4 As Label
+
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel11 As Panel
     Friend WithEvents Button6 As Button
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Button1 As Button
+    Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Button4 As Button
     Friend WithEvents Panel5 As Panel
@@ -372,13 +315,10 @@ Partial Class Form9
     Friend WithEvents Button3 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents Label8 As Label
-    Friend WithEvents catId As TextBox
-    Friend WithEvents addCatBtn As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents catName As TextBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button7 As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents logoutBtn As Button
 End Class

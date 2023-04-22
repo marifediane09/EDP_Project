@@ -1,8 +1,8 @@
-﻿Public Class Form3
+﻿Public Class UserCategories
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim form6 As New Form6()
-        form6.Show()
+        Dim UserProfile As New UserProfile()
+        UserProfile.Show()
         Me.Hide()
     End Sub
 

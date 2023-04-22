@@ -68,14 +68,14 @@ Public Class CartForm
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim form3 As New Form3()
-        form3.Show()
+        Dim UserCategories As New UserCategories()
+        UserCategories.Show()
         Me.Hide()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Dim form6 As New Form6()
-        form6.Show()
+        Dim UserProfile As New UserProfile()
+        UserProfile.Show()
         Me.Hide()
     End Sub
 

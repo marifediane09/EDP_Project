@@ -1,11 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Form6
+Public Class UserProfile
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim form4 As New Form4()
         form4.Show()
         Me.Hide()
     End Sub
-    Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub UserProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         For Each control As Control In Controls
             Dim textBox As TextBox = TryCast(control, TextBox)
             If textBox IsNot Nothing Then
@@ -31,8 +31,8 @@ Public Class Form6
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim form3 As New Form3()
-        form3.Show()
+        Dim UserCategories As New UserCategories()
+        UserCategories.Show()
         Me.Hide()
     End Sub
 

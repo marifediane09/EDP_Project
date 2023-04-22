@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 
-Public Class Form9
+Public Class AdminCategories
     Private Sub addCatBtn_Click(sender As Object, e As EventArgs) Handles addCatBtn.Click
         Try
             Call Connect_to_DB()
@@ -21,7 +21,7 @@ Public Class Form9
         End Try
     End Sub
 
-    Private Sub Form9_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub AdminCategories_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Call Connect_to_DB()
 
@@ -48,8 +48,8 @@ Public Class Form9
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim form7 As New Form7()
-        form7.Show()
+        Dim AdminItems As New AdminItems()
+        AdminItems.Show()
         Me.Hide()
     End Sub
 
@@ -69,8 +69,8 @@ Public Class Form9
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim form11 As New Form11()
-        form11.Show()
+        Dim AdminOrders As New AdminOrders()
+        AdminOrders.Show()
         Me.Hide()
     End Sub
 
