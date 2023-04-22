@@ -1,8 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Mysqlx
+Imports System.Security.Cryptography
 
-Public Class Form2
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+Public Class RegisterForm
+    Private Sub RegisterForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'HIDE THE TEXT OF THE TextBox3 ON THE FIRST LOAD
         password.UseSystemPasswordChar = True
     End Sub
@@ -23,7 +24,7 @@ Public Class Form2
                 mycmd.ExecuteNonQuery()
                 MessageBox.Show("Welcome to EasyRent!", "Successful Registration", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Me.Hide()
-                Form6.Show()
+                UserProfile.Show()
             End Using
 
         Catch ex As MySqlException

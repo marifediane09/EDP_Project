@@ -27,7 +27,7 @@ Public Class Form1
                 Else
                     MessageBox.Show("Welcome to EasyRent, " & username & "!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Me.Hide()
-                    Form6.Show()
+                    UserProfile.Show()
                 End If
             Else
                 MessageBox.Show("Invalid username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -62,11 +62,11 @@ Public Class Form1
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-        ' Create a new instance of Form2
-        Dim form2 As New Form2()
+        ' Create a new instance of RegisterForm
+        Dim RegisterForm As New RegisterForm()
 
-        ' Show Form2 and hide Form1
-        form2.Show()
+        ' Show RegisterForm and hide Form1
+        RegisterForm.Show()
         Me.Hide()
     End Sub
 End Class
