@@ -37,4 +37,4 @@ Password = mdbanares
 Database name = rental_db
 
 Excel Reports can be found in:
-UXEDP>bin>Debug>net7.0-windows>ReportsXLS
+UXEDP>ReportsXLS
