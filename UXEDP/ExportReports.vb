@@ -6,10 +6,16 @@ Module ExportReports
 
     Public currentDate As DateTime = DateTime.Now
     Public strpassword = "mdbanares"
-    Public templatePath As String = IO.Path.Combine(Application.StartupPath, "ReportsXLS\Template\")
-    Public reportFiles As String = IO.Path.Combine(Application.StartupPath, "ReportsXLS\")
-    'Public templatePath As String = System.IO.Directory.GetCurrentDirectory & "\ReportsXLS\Template\"
-    'Public reportFiles As String = System.IO.Directory.GetCurrentDirectory & "\ReportsXLS\"
+    Dim currentDirectory As String = System.IO.Directory.GetCurrentDirectory()
+    Dim parentDirectory1 As String = System.IO.Directory.GetParent(currentDirectory).ToString()
+    Dim parentDirectory2 As String = System.IO.Directory.GetParent(parentDirectory1).ToString()
+    Dim parentDirectory3 As String = System.IO.Directory.GetParent(parentDirectory2).ToString()
+
+    Public templatePath As String = parentDirectory3 & "\ReportsXLS\Template\"
+    Public reportFiles As String = parentDirectory3 & "\ReportsXLS\"
+
+    'Public templatePath As String = "..\..\..\ReportsXLS\Template\"
+    'Public reportFiles As String = "..\..\..\ReportsXLS\"
 
     Public Sub ImportToExcel(ByVal mydg As DataGridView, ByVal templatefilename As String)
         Dim xlsApp As Excel.Application = Nothing
