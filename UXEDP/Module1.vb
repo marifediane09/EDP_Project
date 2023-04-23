@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+
 Module Module1
     Public myconn As New MySql.Data.MySqlClient.MySqlConnection
     Public myConnectionString As String

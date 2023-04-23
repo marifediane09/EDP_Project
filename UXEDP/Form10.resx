@@ -108,7 +108,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -138,7 +138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Panel11.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 101</value>
@@ -526,7 +526,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 127</value>
@@ -550,7 +550,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DataGridView1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="InsertData.Font" type="System.Drawing.Font, System.Drawing">
     <value>Poppins, 9pt</value>
@@ -577,6 +577,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;InsertData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bthPrint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Poppins, 9pt</value>
+  </data>
+  <data name="bthPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>838, 450</value>
+  </data>
+  <data name="bthPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 29</value>
+  </data>
+  <data name="bthPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="bthPrint.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="&gt;&gt;bthPrint.Name" xml:space="preserve">
+    <value>bthPrint</value>
+  </data>
+  <data name="&gt;&gt;bthPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bthPrint.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bthPrint.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

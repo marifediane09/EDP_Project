@@ -42,6 +42,7 @@ Partial Class AdminItems
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.printBtn = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -239,7 +240,7 @@ Partial Class AdminItems
         '
         Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
         Me.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.logoutBtn.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.logoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
         Me.logoutBtn.Location = New System.Drawing.Point(42, 442)
         Me.logoutBtn.Name = "logoutBtn"
@@ -271,12 +272,22 @@ Partial Class AdminItems
         'Button7
         '
         Me.Button7.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button7.Location = New System.Drawing.Point(579, 442)
+        Me.Button7.Location = New System.Drawing.Point(283, 442)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(102, 37)
         Me.Button7.TabIndex = 22
         Me.Button7.Text = "Add"
         Me.Button7.UseVisualStyleBackColor = True
+        '
+        'printBtn
+        '
+        Me.printBtn.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.printBtn.Location = New System.Drawing.Point(860, 442)
+        Me.printBtn.Name = "printBtn"
+        Me.printBtn.Size = New System.Drawing.Size(94, 37)
+        Me.printBtn.TabIndex = 23
+        Me.printBtn.Text = "Export"
+        Me.printBtn.UseVisualStyleBackColor = True
         '
         'AdminItems
         '
@@ -284,6 +295,7 @@ Partial Class AdminItems
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
+        Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label4)
@@ -321,4 +333,5 @@ Partial Class AdminItems
     Friend WithEvents Button7 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents logoutBtn As Button
+    Friend WithEvents printBtn As Button
 End Class

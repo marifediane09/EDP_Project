@@ -43,6 +43,7 @@ Partial Class Form10
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.InsertData = New System.Windows.Forms.Button()
+        Me.bthPrint = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -206,11 +207,18 @@ Partial Class Form10
         Me.InsertData.Name = "InsertData"
         Me.InsertData.UseVisualStyleBackColor = True
         '
+        'bthPrint
+        '
+        resources.ApplyResources(Me.bthPrint, "bthPrint")
+        Me.bthPrint.Name = "bthPrint"
+        Me.bthPrint.UseVisualStyleBackColor = True
+        '
         'Form10
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.Controls.Add(Me.bthPrint)
         Me.Controls.Add(Me.InsertData)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
@@ -247,4 +255,5 @@ Partial Class Form10
     Friend WithEvents Label3 As Label
     Friend WithEvents LogoutBtn As Button
     Friend WithEvents InsertData As Button
+    Friend WithEvents bthPrint As Button
 End Class
