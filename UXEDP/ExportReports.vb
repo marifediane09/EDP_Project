@@ -44,7 +44,7 @@ Module ExportReports
             templatefilename = Path.ChangeExtension(templatefilename, Nothing)
             Dim myfilename As String = templatefilename & " " & DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss") & ".xlsx"
             'MsgBox(myfilename)
-            MessageBox.Show(templatePath, "File created successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show(myfilename, "File created successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             xlsSheet.Protect(strpassword)
             'Page layout view
             xlsApp.ActiveWindow.View = Excel.XlWindowView.xlPageLayoutView
