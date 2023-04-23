@@ -29,6 +29,7 @@ What you can do as an admin:
 - You can view the users registered in your system.
 - Backup database
 - Upload and insert new data (csv format) in the database
+- Export data/reports as excel file
 
 Server connection:
 Server name = localhost
