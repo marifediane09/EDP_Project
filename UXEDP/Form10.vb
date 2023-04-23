@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.IO
+Imports System.Data.Common
+Imports Excel = Microsoft.Office.Interop.Excel
 
 Public Class Form10
 
@@ -138,5 +140,11 @@ Public Class Form10
         Dim backupForm As New backupForm1()
         backupForm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub bthPrint_Click(sender As Object, e As EventArgs) Handles bthPrint.Click
+        'MsgBox(currentDate.ToString)
+        'ExportReports.importToExcel(DataGridView1.DataSource, "C:\Users\user\Documents\rentEase_edp\UXEDP\ReportsXLS\Template\UsersReport.xlsx")
+        Call ImportToExcel(Me.DataGridView1, "userReport.xlsx")
     End Sub
 End Class

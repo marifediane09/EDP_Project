@@ -69,4 +69,7 @@ Public Class AdminItems
         Me.Close()
     End Sub
 
+    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        Call ImportToExcel(Me.DataGridView1, "itemsReport.xlsx")
+    End Sub
 End Class
