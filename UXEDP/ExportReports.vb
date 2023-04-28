@@ -33,9 +33,31 @@ Module ExportReports
             For x = 0 To mydg.RowCount - 1
                 For y = 0 To mydg.ColumnCount - 1
                     'B5 (row 5, column b)
-                    xlsSheet.Cells(x + 5, y + 1) = mydg.Rows(x).Cells(y).Value
+                    xlsSheet.Cells(x + 6, y + 1) = mydg.Rows(x).Cells(y).Value
                 Next
             Next
+            For y = 0 To mydg.ColumnCount - 1
+                'xlsSheet.Cells(5, y + 1) = mydg.Columns(y).HeaderText
+                With xlsSheet.Range(convertToLetters(y + 1) & "5")
+                    '.Value = UCase(mydg.Columns(y).HeaderText)
+                    .Value = mydg.Columns(y).HeaderText
+                    .Font.Bold = True
+                    .Font.Size = 11
+                    .Font.Name = "Arial"
+                    .Font.Color = RGB(0, 0, 0)
+                    .Interior.Color = RGB(135, 206, 235)
+                End With
+            Next
+
+            'Auto-fit columns
+            Dim xlRange As Excel.Range = xlsSheet.UsedRange
+            xlRange.Columns.AutoFit()
+            xlsSheet.PageSetup.PrintArea = xlsSheet.UsedRange.Address
+            xlsSheet.PageSetup.Orientation = Excel.XlPageOrientation.xlLandscape
+            xlsSheet.PageSetup.Zoom = False
+            xlsSheet.PageSetup.FitToPagesWide = 1
+            xlsSheet.PageSetup.FitToPagesTall = False
+
             'Border style
             xlsSheet.Range(convertToLetters(1) & 5, convertToLetters(mydg.ColumnCount) & x + 4).Borders.LineStyle = Excel.XlLineStyle.xlContinuous
 
@@ -102,4 +124,3 @@ Module ExportReports
         End Try
     End Sub
 End Module
-

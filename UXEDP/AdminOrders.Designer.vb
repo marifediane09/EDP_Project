@@ -41,6 +41,7 @@ Partial Class AdminOrders
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.logoutBtn = New System.Windows.Forms.Button()
+        Me.printBtn = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -267,12 +268,23 @@ Partial Class AdminOrders
         Me.logoutBtn.Text = "Logout"
         Me.logoutBtn.UseVisualStyleBackColor = False
         '
+        'printBtn
+        '
+        Me.printBtn.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.printBtn.Location = New System.Drawing.Point(838, 441)
+        Me.printBtn.Name = "printBtn"
+        Me.printBtn.Size = New System.Drawing.Size(116, 38)
+        Me.printBtn.TabIndex = 26
+        Me.printBtn.Text = "Export"
+        Me.printBtn.UseVisualStyleBackColor = True
+        '
         'AdminOrders
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
+        Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView3)
         Me.Controls.Add(Me.Label4)
@@ -308,4 +320,5 @@ Partial Class AdminOrders
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents logoutBtn As Button
+    Friend WithEvents printBtn As Button
 End Class

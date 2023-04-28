@@ -47,6 +47,8 @@ Partial Class AdminCategories
         Me.Label5 = New System.Windows.Forms.Label()
         Me.catName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.updateCat = New System.Windows.Forms.Button()
+        Me.deleteCat = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -329,12 +331,34 @@ Partial Class AdminCategories
         Me.Label3.TabIndex = 54
         Me.Label3.Text = "Add Category"
         '
+        'updateCat
+        '
+        Me.updateCat.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.updateCat.Location = New System.Drawing.Point(297, 446)
+        Me.updateCat.Name = "updateCat"
+        Me.updateCat.Size = New System.Drawing.Size(108, 33)
+        Me.updateCat.TabIndex = 55
+        Me.updateCat.Text = "Update"
+        Me.updateCat.UseVisualStyleBackColor = True
+        '
+        'deleteCat
+        '
+        Me.deleteCat.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.deleteCat.Location = New System.Drawing.Point(516, 446)
+        Me.deleteCat.Name = "deleteCat"
+        Me.deleteCat.Size = New System.Drawing.Size(108, 33)
+        Me.deleteCat.TabIndex = 56
+        Me.deleteCat.Text = "Delete"
+        Me.deleteCat.UseVisualStyleBackColor = True
+        '
         'AdminCategories
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
+        Me.Controls.Add(Me.deleteCat)
+        Me.Controls.Add(Me.updateCat)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.catId)
@@ -381,4 +405,6 @@ Partial Class AdminCategories
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents logoutBtn As Button
+    Friend WithEvents updateCat As Button
+    Friend WithEvents deleteCat As Button
 End Class
