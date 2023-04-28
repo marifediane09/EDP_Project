@@ -44,6 +44,8 @@ Partial Class Form10
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.InsertData = New System.Windows.Forms.Button()
         Me.bthPrint = New System.Windows.Forms.Button()
+        Me.updateBtn = New System.Windows.Forms.Button()
+        Me.deleteBtn = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -213,11 +215,25 @@ Partial Class Form10
         Me.bthPrint.Name = "bthPrint"
         Me.bthPrint.UseVisualStyleBackColor = True
         '
+        'updateBtn
+        '
+        resources.ApplyResources(Me.updateBtn, "updateBtn")
+        Me.updateBtn.Name = "updateBtn"
+        Me.updateBtn.UseVisualStyleBackColor = True
+        '
+        'deleteBtn
+        '
+        resources.ApplyResources(Me.deleteBtn, "deleteBtn")
+        Me.deleteBtn.Name = "deleteBtn"
+        Me.deleteBtn.UseVisualStyleBackColor = True
+        '
         'Form10
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.Controls.Add(Me.deleteBtn)
+        Me.Controls.Add(Me.updateBtn)
         Me.Controls.Add(Me.bthPrint)
         Me.Controls.Add(Me.InsertData)
         Me.Controls.Add(Me.DataGridView1)
@@ -256,4 +272,6 @@ Partial Class Form10
     Friend WithEvents LogoutBtn As Button
     Friend WithEvents InsertData As Button
     Friend WithEvents bthPrint As Button
+    Friend WithEvents updateBtn As Button
+    Friend WithEvents deleteBtn As Button
 End Class

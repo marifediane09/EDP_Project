@@ -144,7 +144,12 @@ Public Class Form10
 
     Private Sub bthPrint_Click(sender As Object, e As EventArgs) Handles bthPrint.Click
         'MsgBox(currentDate.ToString)
-        'ExportReports.importToExcel(DataGridView1.DataSource, "C:\Users\user\Documents\rentEase_edp\UXEDP\ReportsXLS\Template\UsersReport.xlsx")
         Call ImportToExcel(Me.DataGridView1, "userReport.xlsx")
+        'Dim excludedColumns As New List(Of Object) From {"user_password"}
+        'Call ImportToExcel(Me.DataGridView1, "itemsReport.xlsx", excludedColumns)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles updateBtn.Click
+
     End Sub
 End Class

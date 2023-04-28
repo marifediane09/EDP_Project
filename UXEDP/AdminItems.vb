@@ -70,6 +70,11 @@ Public Class AdminItems
     End Sub
 
     Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        'Dim excludedColumns As New List(Of Object) From {"passwords"}
         Call ImportToExcel(Me.DataGridView1, "itemsReport.xlsx")
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
     End Sub
 End Class

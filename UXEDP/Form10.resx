@@ -108,7 +108,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -117,16 +117,16 @@
     <value>Martina, 19.8pt</value>
   </data>
   <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>553, 67</value>
+    <value>586, 67</value>
   </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 42</value>
+    <value>89, 42</value>
   </data>
   <data name="Label4.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
-    <value>View Users</value>
+    <value>Users</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
@@ -138,7 +138,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="Panel11.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 101</value>
@@ -526,7 +526,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 127</value>
@@ -550,7 +550,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DataGridView1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="InsertData.Font" type="System.Drawing.Font, System.Drawing">
     <value>Poppins, 9pt</value>
@@ -565,7 +565,7 @@
     <value>52</value>
   </data>
   <data name="InsertData.Text" xml:space="preserve">
-    <value>Add/Insert Data</value>
+    <value>Insert Data</value>
   </data>
   <data name="&gt;&gt;InsertData.Name" xml:space="preserve">
     <value>InsertData</value>
@@ -577,7 +577,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;InsertData.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="bthPrint.Font" type="System.Drawing.Font, System.Drawing">
     <value>Poppins, 9pt</value>
@@ -604,6 +604,66 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bthPrint.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="updateBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Poppins, 9pt</value>
+  </data>
+  <data name="updateBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="updateBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 450</value>
+  </data>
+  <data name="updateBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="updateBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="updateBtn.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="&gt;&gt;updateBtn.Name" xml:space="preserve">
+    <value>updateBtn</value>
+  </data>
+  <data name="&gt;&gt;updateBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;updateBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;updateBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="deleteBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Poppins, 9pt</value>
+  </data>
+  <data name="deleteBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="deleteBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>575, 450</value>
+  </data>
+  <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 29</value>
+  </data>
+  <data name="deleteBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="deleteBtn.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;deleteBtn.Name" xml:space="preserve">
+    <value>deleteBtn</value>
+  </data>
+  <data name="&gt;&gt;deleteBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;deleteBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

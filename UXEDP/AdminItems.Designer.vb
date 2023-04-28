@@ -43,6 +43,8 @@ Partial Class AdminItems
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.printBtn = New System.Windows.Forms.Button()
+        Me.deleteItem = New System.Windows.Forms.Button()
+        Me.updateItems = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -253,11 +255,11 @@ Partial Class AdminItems
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Martina", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(546, 54)
+        Me.Label4.Location = New System.Drawing.Point(570, 53)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(154, 42)
+        Me.Label4.Size = New System.Drawing.Size(86, 42)
         Me.Label4.TabIndex = 13
-        Me.Label4.Text = "View Items"
+        Me.Label4.Text = "Items"
         '
         'DataGridView1
         '
@@ -289,12 +291,34 @@ Partial Class AdminItems
         Me.printBtn.Text = "Export"
         Me.printBtn.UseVisualStyleBackColor = True
         '
+        'deleteItem
+        '
+        Me.deleteItem.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.deleteItem.Location = New System.Drawing.Point(525, 442)
+        Me.deleteItem.Name = "deleteItem"
+        Me.deleteItem.Size = New System.Drawing.Size(102, 37)
+        Me.deleteItem.TabIndex = 24
+        Me.deleteItem.Text = "Delete"
+        Me.deleteItem.UseVisualStyleBackColor = True
+        '
+        'updateItems
+        '
+        Me.updateItems.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.updateItems.Location = New System.Drawing.Point(404, 442)
+        Me.updateItems.Name = "updateItems"
+        Me.updateItems.Size = New System.Drawing.Size(102, 37)
+        Me.updateItems.TabIndex = 25
+        Me.updateItems.Text = "Update"
+        Me.updateItems.UseVisualStyleBackColor = True
+        '
         'AdminItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
+        Me.Controls.Add(Me.updateItems)
+        Me.Controls.Add(Me.deleteItem)
         Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.DataGridView1)
@@ -334,4 +358,6 @@ Partial Class AdminItems
     Friend WithEvents Label3 As Label
     Friend WithEvents logoutBtn As Button
     Friend WithEvents printBtn As Button
+    Friend WithEvents deleteItem As Button
+    Friend WithEvents updateItems As Button
 End Class
