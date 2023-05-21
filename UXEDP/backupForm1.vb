@@ -82,7 +82,11 @@ Public Class backupForm1
     End Sub
 
     Private Sub backupForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim items() As String = {"Items", "Users", "Orders", "Category Sales"}
-        ComboBox1.Items.AddRange(items)
+
     End Sub
+
+    'Private Sub backupForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    'Dim items() As String = {"Items", "Users", "Orders", "Category Sales"}
+    'ComboBox1.Items.AddRange(items)
+    'End Sub
 End Class

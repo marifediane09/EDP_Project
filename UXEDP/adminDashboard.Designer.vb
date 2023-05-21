@@ -22,6 +22,7 @@ Partial Class adminDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminDashboard))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -212,7 +213,7 @@ Partial Class adminDashboard
         '
         Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
         Me.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.logoutBtn.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.logoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
         Me.logoutBtn.Location = New System.Drawing.Point(42, 437)
         Me.logoutBtn.Name = "logoutBtn"
@@ -263,7 +264,7 @@ Partial Class adminDashboard
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(234, 50)
         Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Reports"
+        Me.Button1.Text = "Backup"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Panel7
@@ -282,7 +283,7 @@ Partial Class adminDashboard
         Me.usersNo.Font = New System.Drawing.Font("Poppins", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.usersNo.Location = New System.Drawing.Point(134, 36)
         Me.usersNo.Name = "usersNo"
-        Me.usersNo.Size = New System.Drawing.Size(26, 40)
+        Me.usersNo.Size = New System.Drawing.Size(25, 40)
         Me.usersNo.TabIndex = 1
         Me.usersNo.Text = "1"
         '
@@ -292,7 +293,7 @@ Partial Class adminDashboard
         Me.Label3.Font = New System.Drawing.Font("Poppins", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(14, 36)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 40)
+        Me.Label3.Size = New System.Drawing.Size(91, 40)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Users:"
         '
@@ -312,7 +313,7 @@ Partial Class adminDashboard
         Me.Label7.Font = New System.Drawing.Font("Poppins", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label7.Location = New System.Drawing.Point(192, 36)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(26, 40)
+        Me.Label7.Size = New System.Drawing.Size(25, 40)
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "1"
         '
@@ -322,7 +323,7 @@ Partial Class adminDashboard
         Me.Label5.Font = New System.Drawing.Font("Poppins", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.Location = New System.Drawing.Point(15, 36)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(161, 40)
+        Me.Label5.Size = New System.Drawing.Size(166, 40)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "New Orders:"
         '
@@ -342,7 +343,7 @@ Partial Class adminDashboard
         Me.Label8.Font = New System.Drawing.Font("Poppins", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label8.Location = New System.Drawing.Point(107, 36)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(92, 40)
+        Me.Label8.Size = New System.Drawing.Size(91, 40)
         Me.Label8.TabIndex = 2
         Me.Label8.Text = "150.00"
         '
@@ -352,7 +353,7 @@ Partial Class adminDashboard
         Me.Label6.Font = New System.Drawing.Font("Poppins", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label6.Location = New System.Drawing.Point(14, 36)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(87, 40)
+        Me.Label6.Size = New System.Drawing.Size(88, 40)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Profit:"
         '
@@ -386,10 +387,10 @@ Partial Class adminDashboard
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Poppins Medium", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label9.Location = New System.Drawing.Point(363, 249)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(213, 31)
+        Me.Label9.Size = New System.Drawing.Size(186, 22)
         Me.Label9.TabIndex = 12
         Me.Label9.Text = "Most Popular Items:"
         '
@@ -439,6 +440,7 @@ Partial Class adminDashboard
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "adminDashboard"
         Me.Text = "EasyRent | Admin"
         Me.Panel2.ResumeLayout(False)

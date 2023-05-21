@@ -22,6 +22,7 @@ Partial Class UserProfile
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserProfile))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -47,6 +48,8 @@ Partial Class UserProfile
         Me.Label8 = New System.Windows.Forms.Label()
         Me.updateBtn = New System.Windows.Forms.Button()
         Me.logoutBtn = New System.Windows.Forms.Button()
+        Me.userId = New System.Windows.Forms.TextBox()
+        Me.userName = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -199,10 +202,10 @@ Partial Class UserProfile
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(748, 363)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(722, 363)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 26)
+        Me.Label3.Size = New System.Drawing.Size(65, 18)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "UserID:"
         '
@@ -237,10 +240,10 @@ Partial Class UserProfile
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(718, 389)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Location = New System.Drawing.Point(692, 389)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(103, 26)
+        Me.Label6.Size = New System.Drawing.Size(90, 18)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Username:"
         '
@@ -307,12 +310,28 @@ Partial Class UserProfile
         Me.logoutBtn.Text = "Logout"
         Me.logoutBtn.UseVisualStyleBackColor = True
         '
+        'userId
+        '
+        Me.userId.Location = New System.Drawing.Point(793, 358)
+        Me.userId.Name = "userId"
+        Me.userId.Size = New System.Drawing.Size(125, 27)
+        Me.userId.TabIndex = 25
+        '
+        'userName
+        '
+        Me.userName.Location = New System.Drawing.Point(793, 389)
+        Me.userName.Name = "userName"
+        Me.userName.Size = New System.Drawing.Size(125, 27)
+        Me.userName.TabIndex = 26
+        '
         'UserProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
+        Me.Controls.Add(Me.userName)
+        Me.Controls.Add(Me.userId)
         Me.Controls.Add(Me.logoutBtn)
         Me.Controls.Add(Me.updateBtn)
         Me.Controls.Add(Me.Label8)
@@ -329,6 +348,7 @@ Partial Class UserProfile
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "UserProfile"
         Me.Text = "EasyRent | Profile"
         Me.Panel1.ResumeLayout(False)
@@ -364,4 +384,6 @@ Partial Class UserProfile
     Friend WithEvents Label8 As Label
     Friend WithEvents updateBtn As Button
     Friend WithEvents logoutBtn As Button
+    Friend WithEvents userId As TextBox
+    Friend WithEvents userName As TextBox
 End Class

@@ -22,6 +22,7 @@ Partial Class CartForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CartForm))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -206,7 +207,7 @@ Partial Class CartForm
         '
         'btnConfirmOrder
         '
-        Me.btnConfirmOrder.Font = New System.Drawing.Font("Poppins Medium", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnConfirmOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnConfirmOrder.Location = New System.Drawing.Point(349, 421)
         Me.btnConfirmOrder.Name = "btnConfirmOrder"
         Me.btnConfirmOrder.Size = New System.Drawing.Size(194, 37)
@@ -245,6 +246,7 @@ Partial Class CartForm
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CartForm"
         Me.Text = "EasyRent | Orders"
         Me.Panel1.ResumeLayout(False)
