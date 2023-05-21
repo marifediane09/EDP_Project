@@ -22,6 +22,7 @@ Partial Class AdminCategories
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminCategories))
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -74,11 +75,11 @@ Partial Class AdminCategories
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Martina", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(352, 57)
+        Me.Label4.Location = New System.Drawing.Point(389, 57)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(219, 42)
+        Me.Label4.Size = New System.Drawing.Size(151, 42)
         Me.Label4.TabIndex = 25
-        Me.Label4.Text = "View Categories"
+        Me.Label4.Text = "Categories"
         '
         'Panel2
         '
@@ -128,7 +129,7 @@ Partial Class AdminCategories
         '
         Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
         Me.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.logoutBtn.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.logoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
         Me.logoutBtn.Location = New System.Drawing.Point(42, 437)
         Me.logoutBtn.Name = "logoutBtn"
@@ -171,7 +172,7 @@ Partial Class AdminCategories
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(234, 50)
         Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Reports"
+        Me.Button1.Text = "Backup"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Panel6
@@ -369,6 +370,7 @@ Partial Class AdminCategories
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AdminCategories"
         Me.Text = "EasyRent | Categories"
         Me.Panel2.ResumeLayout(False)

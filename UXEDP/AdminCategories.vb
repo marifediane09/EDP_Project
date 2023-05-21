@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
+Imports Mysqlx
 
 Public Class AdminCategories
     Private Sub addCatBtn_Click(sender As Object, e As EventArgs) Handles addCatBtn.Click
@@ -47,6 +48,99 @@ Public Class AdminCategories
         End Try
     End Sub
 
+    Private Sub DeleteSelectedCat()
+        ' Prompt the user to enter the item ID
+        Dim itemIdInput As String = InputBox("Enter the category ID to delete:", "Delete Category")
+
+        ' Check if the user entered a valid item ID
+        If Not String.IsNullOrWhiteSpace(itemIdInput) Then
+            Dim catId As Integer
+            If Integer.TryParse(itemIdInput, catId) Then
+                Try
+                    Call Connect_to_DB()
+                    Dim query As String = "DELETE FROM categories WHERE category_id = @item_id"
+
+                    Using mycmd As New MySqlCommand(query, myconn)
+                        mycmd.Parameters.AddWithValue("@item_id", catId)
+
+                        Dim rowsAffected As Integer = mycmd.ExecuteNonQuery()
+
+                        If rowsAffected > 0 Then
+                            MessageBox.Show("Category deleted successfully.", "Successful Item Deletion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                            ' Refresh the DataGridView to reflect the changes
+                            AdminCategories_Load(Nothing, EventArgs.Empty)
+                        Else
+                            MessageBox.Show("No item found with the specified ID.", "Item Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        End If
+                    End Using
+
+                Catch ex As MySqlException
+                    MsgBox(ex.Number & " " & ex.Message)
+                Finally
+                    Disconnect_to_DB()
+                End Try
+            Else
+                MessageBox.Show("Invalid item ID. Please enter a valid numeric ID.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        End If
+    End Sub
+
+    Private Sub UpdateCategory()
+        ' Prompt the user to enter the category ID
+        Dim categoryIdInput As String = InputBox("Enter the category ID to update:", "Update Category")
+
+        ' Check if the user entered a valid category ID
+        If Not String.IsNullOrWhiteSpace(categoryIdInput) Then
+            Dim categoryId As Integer
+            If Integer.TryParse(categoryIdInput, categoryId) Then
+                ' Prompt the user to enter the new category name
+                Dim newCategoryName As String = InputBox("Enter the new category name:", "Update Category")
+
+                ' Check if the user entered a category name
+                If Not String.IsNullOrWhiteSpace(newCategoryName) Then
+                    ' Update the category name in the database using the category ID
+                    UpdateCategoryName(categoryId, newCategoryName)
+
+                    ' Display a success message
+                    MessageBox.Show("Category name updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Invalid category name. Please enter a valid name.", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            Else
+                MessageBox.Show("Invalid category ID. Please enter a valid numeric ID.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        End If
+    End Sub
+
+    Private Sub UpdateCategoryName(categoryId As Integer, newName As String)
+        Try
+            Call Connect_to_DB()
+
+            ' Prepare the SQL update statement
+            Dim updateQuery As String = "UPDATE categories SET category_name = @newCat WHERE category_id = @categoryId"
+
+            ' Create a command object
+            Dim command As New MySqlCommand(updateQuery, myconn)
+
+            ' Add parameters to the command
+            command.Parameters.AddWithValue("@newCat", newName)
+            command.Parameters.AddWithValue("@categoryId", categoryId)
+
+            ' Execute the update command
+            command.ExecuteNonQuery()
+
+            ' Display a success message
+            MessageBox.Show("Category name updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Catch ex As MySqlException
+            MessageBox.Show("An error occurred while updating the category name: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            Disconnect_to_DB()
+        End Try
+    End Sub
+
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim AdminItems As New AdminItems()
         AdminItems.Show()
@@ -78,5 +172,13 @@ Public Class AdminCategories
         Dim form10 As New Form10()
         form10.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub deleteCat_Click(sender As Object, e As EventArgs) Handles deleteCat.Click
+        DeleteSelectedCat()
+    End Sub
+
+    Private Sub updateCat_Click(sender As Object, e As EventArgs) Handles updateCat.Click
+        UpdateCategory()
     End Sub
 End Class

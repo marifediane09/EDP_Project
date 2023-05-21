@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class AdminAddItems
+Partial Class AdminUpdateUsers
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,15 +22,15 @@ Partial Class AdminAddItems
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminAddItems))
-        Me.addBtn = New System.Windows.Forms.Button()
-        Me.price = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminUpdateUsers))
+        Me.updateBtn = New System.Windows.Forms.Button()
+        Me.UserRole = New System.Windows.Forms.TextBox()
+        Me.userName = New System.Windows.Forms.Label()
+        Me.role = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.itemDesc = New System.Windows.Forms.TextBox()
-        Me.itemName = New System.Windows.Forms.TextBox()
+        Me.UName = New System.Windows.Forms.TextBox()
+        Me.firstName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -49,94 +49,94 @@ Partial Class AdminAddItems
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.logoutBtn = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.lastName = New System.Windows.Forms.Label()
+        Me.lName = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.UpdateID = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'addBtn
+        'updateBtn
         '
-        Me.addBtn.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.addBtn.Location = New System.Drawing.Point(567, 423)
-        Me.addBtn.Name = "addBtn"
-        Me.addBtn.Size = New System.Drawing.Size(120, 39)
-        Me.addBtn.TabIndex = 29
-        Me.addBtn.Text = "Add"
-        Me.addBtn.UseVisualStyleBackColor = True
+        Me.updateBtn.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.updateBtn.Location = New System.Drawing.Point(815, 376)
+        Me.updateBtn.Name = "updateBtn"
+        Me.updateBtn.Size = New System.Drawing.Size(120, 39)
+        Me.updateBtn.TabIndex = 29
+        Me.updateBtn.Text = "Update"
+        Me.updateBtn.UseVisualStyleBackColor = True
         '
-        'price
+        'UserRole
         '
-        Me.price.Location = New System.Drawing.Point(557, 287)
-        Me.price.Name = "price"
-        Me.price.Size = New System.Drawing.Size(165, 27)
-        Me.price.TabIndex = 28
+        Me.UserRole.Location = New System.Drawing.Point(770, 287)
+        Me.UserRole.Name = "UserRole"
+        Me.UserRole.Size = New System.Drawing.Size(165, 27)
+        Me.UserRole.TabIndex = 28
         '
-        'Label7
+        'userName
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(450, 202)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(101, 26)
-        Me.Label7.TabIndex = 27
-        Me.Label7.Text = "Description:"
+        Me.userName.AutoSize = True
+        Me.userName.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.userName.Location = New System.Drawing.Point(330, 289)
+        Me.userName.Name = "userName"
+        Me.userName.Size = New System.Drawing.Size(92, 26)
+        Me.userName.TabIndex = 27
+        Me.userName.Text = "Username:"
         '
-        'Label6
+        'role
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(499, 289)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 26)
-        Me.Label6.TabIndex = 26
-        Me.Label6.Text = "Price:"
+        Me.role.AutoSize = True
+        Me.role.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.role.Location = New System.Drawing.Point(684, 288)
+        Me.role.Name = "role"
+        Me.role.Size = New System.Drawing.Size(81, 26)
+        Me.role.TabIndex = 26
+        Me.role.Text = "User role:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(466, 250)
+        Me.Label5.Location = New System.Drawing.Point(819, 273)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 26)
+        Me.Label5.Size = New System.Drawing.Size(0, 26)
         Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Category:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(457, 158)
+        Me.Label3.Location = New System.Drawing.Point(327, 233)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(97, 26)
+        Me.Label3.Size = New System.Drawing.Size(95, 26)
         Me.Label3.TabIndex = 24
-        Me.Label3.Text = "Item Name:"
+        Me.Label3.Text = "First Name:"
         '
-        'itemDesc
+        'UName
         '
-        Me.itemDesc.Location = New System.Drawing.Point(557, 202)
-        Me.itemDesc.Name = "itemDesc"
-        Me.itemDesc.Size = New System.Drawing.Size(165, 27)
-        Me.itemDesc.TabIndex = 22
+        Me.UName.Location = New System.Drawing.Point(427, 289)
+        Me.UName.Name = "UName"
+        Me.UName.Size = New System.Drawing.Size(165, 27)
+        Me.UName.TabIndex = 22
         '
-        'itemName
+        'firstName
         '
-        Me.itemName.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.itemName.Location = New System.Drawing.Point(557, 158)
-        Me.itemName.Name = "itemName"
-        Me.itemName.Size = New System.Drawing.Size(165, 27)
-        Me.itemName.TabIndex = 21
+        Me.firstName.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.firstName.Location = New System.Drawing.Point(427, 233)
+        Me.firstName.Name = "firstName"
+        Me.firstName.Size = New System.Drawing.Size(165, 27)
+        Me.firstName.TabIndex = 21
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Martina", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(567, 72)
+        Me.Label4.Location = New System.Drawing.Point(548, 72)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(135, 42)
+        Me.Label4.Size = New System.Drawing.Size(177, 42)
         Me.Label4.TabIndex = 32
-        Me.Label4.Text = "Add Item"
+        Me.Label4.Text = "Update User"
         '
         'Panel2
         '
@@ -339,54 +339,65 @@ Partial Class AdminAddItems
         Me.logoutBtn.Text = "Logout"
         Me.logoutBtn.UseVisualStyleBackColor = False
         '
-        'Label9
+        'lastName
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(452, 334)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(99, 26)
-        Me.Label9.TabIndex = 36
-        Me.Label9.Text = "Item Status:"
+        Me.lastName.AutoSize = True
+        Me.lastName.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lastName.Location = New System.Drawing.Point(671, 232)
+        Me.lastName.Name = "lastName"
+        Me.lastName.Size = New System.Drawing.Size(93, 26)
+        Me.lastName.TabIndex = 38
+        Me.lastName.Text = "Last Name:"
         '
-        'ComboBox1
+        'lName
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(557, 334)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(165, 28)
-        Me.ComboBox1.TabIndex = 37
+        Me.lName.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lName.Location = New System.Drawing.Point(770, 231)
+        Me.lName.Name = "lName"
+        Me.lName.Size = New System.Drawing.Size(165, 27)
+        Me.lName.TabIndex = 37
         '
-        'ComboBox2
+        'Label13
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(557, 248)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(165, 28)
-        Me.ComboBox2.TabIndex = 38
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Poppins", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label13.Location = New System.Drawing.Point(327, 180)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(323, 26)
+        Me.Label13.TabIndex = 45
+        Me.Label13.Text = "You are editing the contents from user ID:"
         '
-        'AdminAddItems
+        'UpdateID
+        '
+        Me.UpdateID.Location = New System.Drawing.Point(648, 178)
+        Me.UpdateID.Name = "UpdateID"
+        Me.UpdateID.ReadOnly = True
+        Me.UpdateID.Size = New System.Drawing.Size(74, 27)
+        Me.UpdateID.TabIndex = 46
+        '
+        'AdminUpdateUsers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.UpdateID)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.lastName)
+        Me.Controls.Add(Me.lName)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.addBtn)
-        Me.Controls.Add(Me.price)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.updateBtn)
+        Me.Controls.Add(Me.UserRole)
+        Me.Controls.Add(Me.userName)
+        Me.Controls.Add(Me.role)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.itemDesc)
-        Me.Controls.Add(Me.itemName)
+        Me.Controls.Add(Me.UName)
+        Me.Controls.Add(Me.firstName)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "AdminAddItems"
+        Me.Name = "AdminUpdateUsers"
         Me.Text = "EasyRent | Items"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -396,14 +407,14 @@ Partial Class AdminAddItems
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents addBtn As Button
-    Friend WithEvents price As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents updateBtn As Button
+    Friend WithEvents UserRole As TextBox
+    Friend WithEvents userName As Label
+    Friend WithEvents role As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents itemDesc As TextBox
-    Friend WithEvents itemName As TextBox
+    Friend WithEvents UName As TextBox
+    Friend WithEvents firstName As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel11 As Panel
@@ -420,9 +431,11 @@ Partial Class AdminAddItems
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents logoutBtn As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents lastName As Label
+    Friend WithEvents lName As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents UpdateID As TextBox
+    'Friend WithEvents ItemId As Label
 End Class

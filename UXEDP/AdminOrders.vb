@@ -61,4 +61,8 @@ Public Class AdminOrders
         form10.Show()
         Me.Hide()
     End Sub
+
+    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        Call ImportToExcel(Me.DataGridView3, "ordersReport.xlsx")
+    End Sub
 End Class

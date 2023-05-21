@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class backupForm1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class backupForm1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(backupForm1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.logoutBtn = New System.Windows.Forms.Button()
         Me.Panel11 = New System.Windows.Forms.Panel()
@@ -43,9 +44,6 @@ Partial Class backupForm1
         Me.BrowseLoc = New System.Windows.Forms.Button()
         Me.BackupBtn = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -117,7 +115,7 @@ Partial Class backupForm1
         Me.ReportsBtn.Name = "ReportsBtn"
         Me.ReportsBtn.Size = New System.Drawing.Size(234, 50)
         Me.ReportsBtn.TabIndex = 16
-        Me.ReportsBtn.Text = "Reports"
+        Me.ReportsBtn.Text = "Backup"
         Me.ReportsBtn.UseVisualStyleBackColor = False
         '
         'Panel3
@@ -254,7 +252,7 @@ Partial Class backupForm1
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(338, 294)
+        Me.TextBox1.Location = New System.Drawing.Point(337, 237)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(432, 34)
         Me.TextBox1.TabIndex = 9
@@ -262,7 +260,7 @@ Partial Class backupForm1
         'BrowseLoc
         '
         Me.BrowseLoc.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.BrowseLoc.Location = New System.Drawing.Point(794, 292)
+        Me.BrowseLoc.Location = New System.Drawing.Point(793, 235)
         Me.BrowseLoc.Name = "BrowseLoc"
         Me.BrowseLoc.Size = New System.Drawing.Size(111, 36)
         Me.BrowseLoc.TabIndex = 11
@@ -272,7 +270,7 @@ Partial Class backupForm1
         'BackupBtn
         '
         Me.BackupBtn.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.BackupBtn.Location = New System.Drawing.Point(794, 345)
+        Me.BackupBtn.Location = New System.Drawing.Point(793, 288)
         Me.BackupBtn.Name = "BackupBtn"
         Me.BackupBtn.Size = New System.Drawing.Size(111, 36)
         Me.BackupBtn.TabIndex = 12
@@ -283,40 +281,11 @@ Partial Class backupForm1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(338, 254)
+        Me.Label3.Location = New System.Drawing.Point(337, 197)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(174, 31)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Backup Database"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(338, 115)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(87, 31)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Records"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(338, 149)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(432, 39)
-        Me.ComboBox1.TabIndex = 19
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Poppins", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(794, 149)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(111, 36)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "Export"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'backupForm1
         '
@@ -324,17 +293,15 @@ Partial Class backupForm1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(1010, 491)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BackupBtn)
         Me.Controls.Add(Me.BrowseLoc)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "backupForm1"
-        Me.Text = "backupForm1"
+        Me.Text = "EasyRent | Backup"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -365,7 +332,4 @@ Partial Class backupForm1
     Friend WithEvents BrowseLoc As Button
     Friend WithEvents BackupBtn As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
 End Class

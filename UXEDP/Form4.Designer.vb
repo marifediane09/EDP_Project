@@ -81,10 +81,10 @@ Partial Class Form4
         'ItemPrice
         '
         Me.ItemPrice.AutoSize = True
-        Me.ItemPrice.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ItemPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ItemPrice.Location = New System.Drawing.Point(203, 335)
         Me.ItemPrice.Name = "ItemPrice"
-        Me.ItemPrice.Size = New System.Drawing.Size(0, 26)
+        Me.ItemPrice.Size = New System.Drawing.Size(0, 18)
         Me.ItemPrice.TabIndex = 2
         '
         'RentButton

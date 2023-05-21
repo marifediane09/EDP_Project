@@ -102,7 +102,72 @@ Public Class Form10
         End If
     End Sub
 
+    Private Sub DeleteSelectedUser()
+        ' Prompt the user to enter the item ID
+        Dim userIdInput As String = InputBox("Enter the user ID to delete:", "Delete User")
 
+        ' Check if the user entered a valid item ID
+        If Not String.IsNullOrWhiteSpace(userIdInput) Then
+            Dim userId As Integer
+            If Integer.TryParse(userIdInput, userId) Then
+                Try
+                    Call Connect_to_DB()
+                    Dim query As String = "DELETE FROM users WHERE user_id = @user_id"
+
+                    Using mycmd As New MySqlCommand(query, myconn)
+                        mycmd.Parameters.AddWithValue("@user_id", userId)
+
+                        Dim rowsAffected As Integer = mycmd.ExecuteNonQuery()
+
+                        If rowsAffected > 0 Then
+                            MessageBox.Show("User deleted successfully.", "Successful User Deletion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                            ' Refresh the DataGridView to reflect the changes
+                            Form10_Load(Nothing, EventArgs.Empty)
+                        Else
+                            MessageBox.Show("No user found with the specified ID.", "User Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        End If
+                    End Using
+
+                Catch ex As MySqlException
+                    MsgBox(ex.Number & " " & ex.Message)
+                Finally
+                    Disconnect_to_DB()
+                End Try
+            Else
+                MessageBox.Show("Invalid user ID. Please enter a valid numeric ID.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        End If
+    End Sub
+
+    Private Sub UpdateUser()
+        ' Prompt the user to enter the category ID
+        Dim userIdInput As String = InputBox("Enter the user ID to update:", "Update User")
+
+        ' Check if the user entered a valid item ID
+        If Not String.IsNullOrWhiteSpace(userIdInput) Then
+            Dim userId As Integer
+            If Integer.TryParse(userIdInput, userId) Then
+                ' Create an instance of the AdminUpdateItems form
+                Dim adminUpdateUserForm As New AdminUpdateUsers()
+
+                ' Set the ItemId property of the AdminUpdateItems form
+                adminUpdateUserForm.UserId = userId
+
+                ' Show the AdminUpdateItems form
+                adminUpdateUserForm.Show()
+
+                ' Assign the ItemId value to the TextBox on the AdminUpdateItems form
+                adminUpdateUserForm.UpdateID.Text = adminUpdateUserForm.UserId.ToString()
+
+                ' Hide the current form
+                Me.Hide()
+
+            Else
+                MessageBox.Show("Invalid item ID. Please enter a valid numeric ID.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        End If
+    End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim dashboard As New adminDashboard()
         dashboard.Show()
@@ -150,6 +215,10 @@ Public Class Form10
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles updateBtn.Click
+        UpdateUser()
+    End Sub
 
+    Private Sub deleteBtn_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
+        DeleteSelectedUser()
     End Sub
 End Class

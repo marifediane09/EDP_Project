@@ -22,6 +22,7 @@ Partial Class AdminUpdateItems
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminUpdateItems))
         Me.updateBtn = New System.Windows.Forms.Button()
         Me.price = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -207,7 +208,7 @@ Partial Class AdminUpdateItems
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(234, 50)
         Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Reports"
+        Me.Button1.Text = "Backup"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Panel3
@@ -469,6 +470,7 @@ Partial Class AdminUpdateItems
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.itemDesc)
         Me.Controls.Add(Me.itemName)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AdminUpdateItems"
         Me.Text = "EasyRent | Items"
         Me.Panel2.ResumeLayout(False)

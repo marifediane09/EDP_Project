@@ -34,9 +34,14 @@ Public Class Form4
                 ' Get the image file name from the database
                 Dim imageName As String = myreader("image").ToString()
 
-                ' Get the image path in the resources folder based on the file name
-                '[projectFolder]\bin\Debug\net7.0-windows\Resources"
-                Dim imagePath As String = $"{Application.StartupPath}Resources\{imageName}"
+                'Dim imagePath As String = $"{Application.StartupPath}Resources\{imageName}"
+                Dim currentDirectory As String = System.IO.Directory.GetCurrentDirectory()
+                Dim imagePath As String = System.IO.Directory.GetParent(currentDirectory).ToString()
+                Dim imagePath1 As String = System.IO.Directory.GetParent(imagePath).ToString()
+                Dim imagePath2 As String = System.IO.Directory.GetParent(imagePath1).ToString()
+
+                'Dim imagePath3 As String = imagePath2 & "\Resources\"
+                Dim imagePath3 As String = Path.Combine(imagePath2, "Resources", imageName)
 
                 ' Create an Item object and add it to the list
                 'Dim item As New Item With {
@@ -45,8 +50,22 @@ Public Class Form4
                 '.Image = Image.FromFile(imagePath),
                 '.Price = Convert.ToDecimal(myreader("price"))
                 '}
-                Dim item As New Item(Convert.ToInt32(myreader("item_id")), myreader("item_name").ToString(), Image.FromFile(imagePath), Convert.ToDecimal(myreader("price")))
-                items.Add(item)
+                ' Create an Item object and add it to the list
+                Dim item As Item = Nothing
+                Try
+                    item = New Item(Convert.ToInt32(myreader("item_id")), myreader("item_name").ToString(), Image.FromFile(imagePath3), Convert.ToDecimal(myreader("price")))
+                Catch ex As Exception
+                    ' Handle the exception
+                    MessageBox.Show($"Error loading image: {ex.Message}")
+                End Try
+
+                If item IsNot Nothing Then
+                    items.Add(item)
+                    AvailableItemsListBox.Items.Add(myreader("item_name").ToString())
+                End If
+
+                'Dim item As New Item(Convert.ToInt32(myreader("item_id")), myreader("item_name").ToString(), Image.FromFile(imagePath3), Convert.ToDecimal(myreader("price")))
+                'items.Add(item)
 
                 ' Add the item name to the ListBox control
                 AvailableItemsListBox.Items.Add(myreader("item_name").ToString())
@@ -68,19 +87,25 @@ Public Class Form4
 
     Private Sub RentButton_Click(sender As Object, e As EventArgs) Handles RentButton.Click
         ' Get the selected item from the AvailableItemsListBox.
-        Dim selectedItem As Item = items(AvailableItemsListBox.SelectedIndex)
+        Try
+            ' Get the selected item from the AvailableItemsListBox.
+            Dim selectedItem As Item = items(AvailableItemsListBox.SelectedIndex)
 
-        ' Create a new instance of the CartForm and pass in the SelectedItems list.
-        Dim cartForm As New CartForm(SelectedItems)
+            ' Create a new instance of the CartForm and pass in the SelectedItems list.
+            Dim cartForm As New CartForm(SelectedItems)
 
-        ' Add the selected item to the SelectedItems list in the CartForm.
-        cartForm.SelectedItems.Add(selectedItem)
+            ' Add the selected item to the SelectedItems list in the CartForm.
+            cartForm.SelectedItems.Add(selectedItem)
 
-        ' Show the details of the selected item in the DataGridView on the CartForm.
-        cartForm.DataGridView1.Rows.Add(selectedItem.Name, selectedItem.Price.ToString("C"))
+            ' Show the details of the selected item in the DataGridView on the CartForm.
+            cartForm.DataGridView1.Rows.Add(selectedItem.Name, selectedItem.Price.ToString("C"))
 
-        MessageBox.Show("The item has been added to your cart. View them in 'Orders'.")
-        'cartForm.ShowDialog()
+            MessageBox.Show("The item has been added to your cart. View them in 'Orders'.")
+            'cartForm.ShowDialog()
+        Catch ex As Exception
+            ' Handle the exception
+            MessageBox.Show($"Error adding item to cart: {ex.Message}")
+        End Try
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
