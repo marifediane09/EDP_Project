@@ -66,7 +66,7 @@ Partial Class backupForm1
         '
         Me.logoutBtn.BackColor = System.Drawing.Color.MidnightBlue
         Me.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.logoutBtn.Font = New System.Drawing.Font("Poppins Medium", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.logoutBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.logoutBtn.ForeColor = System.Drawing.SystemColors.Control
         Me.logoutBtn.Location = New System.Drawing.Point(42, 437)
         Me.logoutBtn.Name = "logoutBtn"
