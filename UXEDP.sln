@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UXEDP", "UXEDP\UXEDP.vbproj", "{91F66054-E678-4FCE-AA5D-F02457E3911D}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "UXEDP", "UXEDP\UXEDP.vbproj", "{91F66054-E678-4FCE-AA5D-F02457E3911D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RentEaseSetup", "RentEaseSetup\RentEaseSetup.vdproj", "{31324234-6B56-4E9C-AEAA-FFA14A11A681}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EasyRentSetup", "EasyRentSetup\EasyRentSetup.vdproj", "{408C5E2F-21E6-4175-99E7-1EA243588631}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{91F66054-E678-4FCE-AA5D-F02457E3911D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91F66054-E678-4FCE-AA5D-F02457E3911D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F66054-E678-4FCE-AA5D-F02457E3911D}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{91F66054-E678-4FCE-AA5D-F02457E3911D}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{91F66054-E678-4FCE-AA5D-F02457E3911D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91F66054-E678-4FCE-AA5D-F02457E3911D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31324234-6B56-4E9C-AEAA-FFA14A11A681}.Debug|Any CPU.ActiveCfg = Release
+		{31324234-6B56-4E9C-AEAA-FFA14A11A681}.Release|Any CPU.ActiveCfg = Release
+		{408C5E2F-21E6-4175-99E7-1EA243588631}.Debug|Any CPU.ActiveCfg = Debug
+		{408C5E2F-21E6-4175-99E7-1EA243588631}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
